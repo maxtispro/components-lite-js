@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <title>Components Lite JS</title>
+        <script src="/components.lite.js"></script>
+        <script src="/example/main.js"></script>
+        <link rel="stylesheet" href="/example/main.css">
+    </head>
+    <body>
+        <example-component bg-color="#000000" text-color="#ffffff">
+            <span slot="title">Custom Container</span>
+            <p>This is what the custom container looks like xD</p>
+        </example-component>
+        <example-component>
+            <span slot="title">Reusable Container</span>
+            <p>This container is also reusable</p>
+        </example-component>
+    </body>
+</html>
