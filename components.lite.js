@@ -17,11 +17,7 @@ function createComponent(name, attrList, htmlFunc)
             constructor()
             {
                 super();
-
-                this.shadow = this.attachShadow({ mode: "open" });
-
-                this.template = document.createElement("template");
-
+                this.attachShadow({ mode: "open" });
                 this.attrs = {};
             }
 
@@ -33,9 +29,7 @@ function createComponent(name, attrList, htmlFunc)
                 });
 
                 const content = htmlFunc(this.attrs).trim();
-                this.template.innerHTML = content;
-
-                this.shadow.appendChild(this.template.content.cloneNode(true));
+                this.shadowRoot.innerHTML = content;
             }
 
             connectedCallback()
